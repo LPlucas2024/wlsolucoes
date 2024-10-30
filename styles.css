@@ -1,100 +1,121 @@
-/* Reset e configurações globais */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif; /* Mudança para uma fonte mais moderna */
 }
 
 body {
-    line-height: 1.6;
-    color: #333; /* Cor de texto mais suave */
-    background-color: #f4f4f4; /* Fundo leve */
+    font-family: Arial, sans-serif;
+    line-height: 2.5;
+    color: #0f0e0e;
+    background-color: #f4f4f9;
 }
 
-/* Container principal */
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
-    padding: 20px;
 }
 
 /* Cabeçalho */
 header {
-    background: #0055a5; /* Cor de fundo do cabeçalho */
-    color: white;
-    padding: 20px 0;
+    background-color: #01386e;
+    color: #ffffff;
+    padding: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     text-align: center;
 }
 
-.logo {
-    max-width: 100px; /* Tamanho máximo para a logo */
-    margin-bottom: 10px; /* Espaço abaixo da logo */
+header .logo {
+    width: 200px; /* Ajuste conforme necessário */
+    height: auto;
+    position: absolute;
+    left: 1em;
+    top: 1em;
+}
+
+header .logo-text {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 /* Navegação */
-nav ul {
+header nav {
+    margin-left: ;
+    margin-right: 1em;
+}
+
+header nav ul {
     list-style: none;
     display: flex;
-    justify-content: center; /* Centraliza a navegação */
+    gap: 20px;
 }
 
-nav ul li {
-    margin: 0 15px; /* Espaço entre os itens da navegação */
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-nav ul li a {
-    color: white; /* Cor do texto dos links */
-    text-decoration: none; /* Remove sublinhado */
-    padding: 5px 10px; /* Adiciona espaço em torno do link */
-    transition: color 0.3s; /* Transição suave na cor */
+/* Seção Início */
+#home {
+    background: url('images/home-bg.jpg') no-repeat center center/cover;
+    color: #2c2121;
+    text-align: center;
+    padding: 4em 0;
 }
 
-nav ul li a:hover {
-    color: #ffcc00; /* Cor de destaque ao passar o mouse */
+/* Seção Serviços */
+#services ul {
+    list-style: none;
+    padding-left: 0;
 }
 
-/* Seções */
-section {
-    background: white; /* Fundo branco para seções */
-    margin: 20px 0;
-    padding: 20px; /* Espaçamento interno */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+#services ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 1em 0;
 }
 
-h2 {
-    color: #0055a5; /* Cor dos títulos */
-    margin-bottom: 10px;
+#services ul li img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+/* Seção Por Que Escolher */
+#why-choose {
+    background: url('images/why-choose-bg.jpg') no-repeat center center/cover;
+    color: #161414;
+    padding: 4em 0;
+    text-align: center;
+}
+
+/* Botão WhatsApp */
+#contact .whatsapp-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1em;
 }
 
 /* Rodapé */
 footer {
-    background: #333; /* Cor de fundo do rodapé */
-    color: white;
+    background-color: #003366;
+    color: #ffffff;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-
-/* Botão do WhatsApp */
-.whatsapp-button {
-    margin-top: 20px;
-    text-align: center; /* Centraliza o botão */
-}
-
-.whatsapp-button a {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #25D366; /* Cor do WhatsApp */
-    color: #fff; /* Texto branco */
-    border-radius: 5px; /* Bordas arredondadas */
-    text-decoration: none; /* Remove sublinhado */
-    font-weight: bold;
-    transition: background 0.3s; /* Efeito de transição */
-}
-
-.whatsapp-button a:hover {
-    background: #128C7E; /* Cor do WhatsApp ao passar o mouse */
+    padding: 1em 0;
+    font-size: 0.9rem;
+    margin-top: 2em;
 }
